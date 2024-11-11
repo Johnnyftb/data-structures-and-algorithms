@@ -1,4 +1,4 @@
-package lists.linkedLists;
+package lists.singlyLinkedLists;
 
 public class EmployeeLinkedList {
     private EmployeeNode head;

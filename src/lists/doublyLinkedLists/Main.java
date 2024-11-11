@@ -1,7 +1,6 @@
-package lists.linkedLists;
+package lists.doublyLinkedLists;
 
 public class Main {
-
     public static void main(String[] args) {
         Employee janeJones = new Employee("Jane", "Jones", 123);
         Employee johnDoe = new Employee("John", "Doe", 4567);
@@ -9,16 +8,28 @@ public class Main {
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
 
         EmployeeLinkedList list = new EmployeeLinkedList();
+
         list.addToFront(janeJones);
         list.addToFront(johnDoe);
         list.addToFront(marySmith);
         list.addToFront(mikeWilson);
 
         System.out.println(list.getSize());
+        list.printList();
 
+        Employee billEnd = new Employee("Bill", "Emd", 78);
+        list.addToEnd(billEnd);
+
+        System.out.println(list.getSize());
         list.printList();
 
         list.removeFromFront();
+
+        System.out.println(list.getSize());
+        list.printList();
+
+        list.removeFromEnd();
+
         System.out.println(list.getSize());
         list.printList();
     }

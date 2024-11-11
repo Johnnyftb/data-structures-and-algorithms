@@ -1,4 +1,6 @@
-package lists.linkedLists;
+package lists.doublyLinkedLists;
+
+import java.util.Objects;
 
 public class Employee {
 
@@ -43,5 +45,17 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", id=" + id +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee employee)) return false;
+        return id == employee.id && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, id);
     }
 }
