@@ -23,12 +23,8 @@ public class Main {
         System.out.println(list.getSize());
         list.printList();
 
-        list.removeFromFront();
-
-        System.out.println(list.getSize());
-        list.printList();
-
-        list.removeFromEnd();
+        Employee michaelMiddle = new Employee("Michael", "Middle", 456);
+        list.addBefore(michaelMiddle, marySmith);
 
         System.out.println(list.getSize());
         list.printList();

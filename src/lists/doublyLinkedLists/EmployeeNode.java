@@ -1,5 +1,7 @@
 package lists.doublyLinkedLists;
 
+import java.util.Objects;
+
 public class EmployeeNode {
 
     private Employee employee;
@@ -36,5 +38,18 @@ public class EmployeeNode {
 
     public String toString() {
         return employee.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EmployeeNode that = (EmployeeNode) o;
+        return Objects.equals(employee, that.employee) && Objects.equals(next, that.next) && Objects.equals(prev, that.prev);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(employee, next, prev);
     }
 }

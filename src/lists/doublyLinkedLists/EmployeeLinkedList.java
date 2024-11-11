@@ -33,6 +33,41 @@ public class EmployeeLinkedList {
          size++;
     }
 
+    public boolean addBefore(Employee employeeToAdd, Employee nextEmployee) {
+        boolean employeeExists = false;
+
+        EmployeeNode currentNode = head;
+        EmployeeNode employeeToAddNode = new EmployeeNode(employeeToAdd);
+
+        if (currentNode.getEmployee().equals(nextEmployee)) {
+            head = employeeToAddNode;
+            head.setNext(currentNode);
+            currentNode.setPrev(employeeToAddNode);
+            employeeExists = true;
+            size++;
+            return employeeExists;
+        }
+
+        while (currentNode.getNext() != null) {
+            if (currentNode.getEmployee().equals(nextEmployee)) {
+                EmployeeNode previousNode = currentNode.getPrev();
+
+                previousNode.setNext(employeeToAddNode);
+                employeeToAddNode.setPrev(previousNode);
+
+                employeeToAddNode.setNext(currentNode);
+                currentNode.setPrev(employeeToAddNode);
+                employeeExists = true;
+                size++;
+                break;
+            }
+
+            currentNode = currentNode.getNext();
+        }
+
+        return employeeExists;
+    }
+
     public EmployeeNode removeFromFront() {
         if (isEmpty()) {
             return null;
