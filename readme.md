@@ -25,3 +25,4 @@ Below is a list of data structures and algorithms i've learnt so far:
 ### Stacks
 
 - Array Stack
+- Linked List Stack
