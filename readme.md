@@ -21,3 +21,7 @@ Below is a list of data structures and algorithms i've learnt so far:
 - Vectors
 - Singly Linked Lists
 - Doubly Linked Lists
+
+### Stacks
+
+- Array Stack
