@@ -13,6 +13,15 @@ public class Main {
         map.put("Doe", johnDoe);
         map.put("Wilson", mikeWilson);
         map.put("Smith", marySmith);
+        map.put("End", billEnd);
+
+        map.printHashtable();
+
+        System.out.println("Retrieve key Wilson: " + map.get("Wilson"));
+        System.out.println("Retrieve key Smith: " + map.get("Smith"));
+
+        map.remove("Wilson");
+        map.remove("Jones");
 
         map.printHashtable();
     }
