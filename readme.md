@@ -35,3 +35,4 @@ Below is a list of data structures and algorithms i've learnt so far:
 ### Hashtables
 
 - Hashtable w/ Linear Probing
+- Hashtable w/ Chaining
