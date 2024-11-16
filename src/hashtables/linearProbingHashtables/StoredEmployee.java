@@ -1,4 +1,4 @@
-package hashtables;
+package hashtables.linearProbingHashtables;
 
 public class StoredEmployee {
 

@@ -1,4 +1,4 @@
-package hashtables;
+package hashtables.linearProbingHashtables;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,12 +8,11 @@ public class Main {
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
         Employee billEnd = new Employee("Bill", "End", 76);
 
-        SimpleHashtable map = new SimpleHashtable();
+        HashTable map = new HashTable();
         map.put("Jones", janeJones);
         map.put("Doe", johnDoe);
         map.put("Wilson", mikeWilson);
         map.put("Smith", marySmith);
-        map.put("End", billEnd);
 
         map.printHashtable();
 
