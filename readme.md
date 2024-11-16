@@ -31,3 +31,7 @@ Below is a list of data structures and algorithms i've learnt so far:
 
 - Array Queue
 - Circular Array Queue
+
+### Hashtables
+
+- Simple Hashtable
