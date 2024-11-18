@@ -14,6 +14,7 @@ Below is a list of data structures and algorithms i've learnt so far:
 - Quick Sort
 - Counting Sort
 - Radix Sort
+- Bucket Sort
 
 ### Lists
 
