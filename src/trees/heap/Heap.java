@@ -68,24 +68,39 @@ public class Heap {
         while (index <= lastHeapIndex) {
             int leftChild = getChild(index, true);
             int rightChild = getChild(index, false);
-
             if (leftChild <= lastHeapIndex) {
                 if (rightChild > lastHeapIndex) {
                     childToSwap = leftChild;
-                } else {
+                }
+                else {
                     childToSwap = (heap[leftChild] > heap[rightChild] ? leftChild : rightChild);
                 }
 
                 if (heap[index] < heap[childToSwap]) {
-                    int temp = heap[index];
+                    int tmp = heap[index];
                     heap[index] = heap[childToSwap];
-                    heap[childToSwap] = temp;
-                } else {
+                    heap[childToSwap] = tmp;
+                }
+                else {
                     break;
                 }
 
                 index = childToSwap;
             }
+            else {
+                break;
+            }
+        }
+    }
+
+    public void sort() {
+        int lastHeapIndex = size - 1;
+        for (int i = 0; i < lastHeapIndex; i++) {
+            int tmp = heap[0];
+            heap[0] = heap[lastHeapIndex - i];
+            heap[lastHeapIndex - i] = tmp;
+
+            fixHeapBelow(0, lastHeapIndex - i - 1);
         }
     }
 

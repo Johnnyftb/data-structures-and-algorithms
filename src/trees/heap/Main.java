@@ -13,9 +13,12 @@ public class Main {
         heap.insert(52);
         heap.insert(67);
 
-        heap.printHeap();
+//        heap.printHeap();
+//
+//        heap.delete(1);
+//        heap.printHeap();
 
-        heap.delete(1);
+        heap.sort();
         heap.printHeap();
     }
 }

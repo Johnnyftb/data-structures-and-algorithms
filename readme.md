@@ -15,6 +15,7 @@ Below is a list of data structures and algorithms i've learnt so far:
 - Counting Sort
 - Radix Sort
 - Bucket Sort
+- Heap Sort
 
 ### Lists
 
@@ -46,3 +47,4 @@ Below is a list of data structures and algorithms i've learnt so far:
 
 - Binary Search Tree
 - Heap
+- Priority Queue
